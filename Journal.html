@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренды и советы - DressWise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+    function openModal(id) {
+        document.getElementById(id).style.display = "block";
+    }
+
+    function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+    }
+
+    // Закрытие по клику вне окна
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = "none";
+        }
+    }
+</script>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Главная</a></li>
+                <li><a href="Journal.html">Журнал</a></li>
+                <li><a href="Style_Quiz.html">Подбор образа</a></li>
+                <li><a href="lookbook.html">Лукбук</a></li>
+                <li><a href="Profile.html">Личный кабинет</a></li>
+                <li><a href="register.html">Вход и Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="blog" class="blog-section">
+            <div class="container">
+                <h2>Тренды & Советы</h2>
+                <p class="subtitle">Будь в курсе моды — открой для себя стильные идеи, советы стилистов и вдохновляющие видео.</p>
+
+                <div class="articles-grid">
+
+                    <div class="article-card">
+                        <img src="https://images.unsplash.com/photo-1521334884684-d80222895322" alt="Весна 2025">
+                        <h3>Что будет модно весной 2025?</h3>
+                        <p>Нежные пастельные оттенки, расслабленный крой и винтажные силуэты возвращаются! Узнай, что стоит добавить в гардероб уже сейчас.</p>
+                        <a href="#" class="read-more">Читать далее →</a>
+                    </div>
+
+                    <div class="article-card">
+                        <img src="https://images.unsplash.com/photo-1520975918318-7e0f35c6dc8a" alt="Капсульный гардероб">
+                        <h3>Как собрать капсульный гардероб</h3>
+                        <p>Минимум вещей — максимум стиля. Расскажем, как собрать идеальный капсульный гардероб на каждый сезон и не тратить лишнее.</p>
+                        <a href="#" class="read-more">Читать далее →</a>
+                    </div>
+
+                    <div class="article-card">
+                        <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051" alt="Видео-гайды">
+                        <h3>Видео-гайды от стилистов</h3>
+                        <p>Быстрые советы, трендовые образы, TikTok-подборки и лайфхаки — смотри, вдохновляйся и применяй!</p>
+                        <a href="#" class="read-more">Смотреть видео →</a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Модальное окно для статьи -->
+            <div id="modal-article" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal-article')">&times;</span>
+                    <h2>Что будет модно весной 2025?</h2>
+                    <p>Весна 2025 — это время обновления и индивидуальности. В моде снова винтажные силуэты 90-х, пастельные и земляные оттенки, а также акцент на текстуры: лен, деним, твид. На подиумах — расслабленные костюмы, объемные плечи и экосумки.
+                        Образы стали более "умными" и универсальными — именно так, как мы любим в DressWise.</p>
+                </div>
+            </div>
+
+            <!-- Модальное окно для видео -->
+            <div id="modal-video" class="modal">
+                <div class="modal-content video-modal">
+                    <span class="close" onclick="closeModal('modal-video')">&times;</span>
+                    <h2>Видео-гайды от стилистов</h2>
+                    <iframe width="100%" height="315" src="c:\Users\Коркем\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\9F5CA245A4E4BB9FE34414B6ACC2EA49\Видео WhatsApp 2025-04-07 в 20.55.13_bcf1432f.mp4" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 DressWise</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация и Вход - DressWise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Главная</a></li>
+                <li><a href="Journal.html">Журнал</a></li>
+                <li><a href="Style_Quiz.html">Подбор образа</a></li>
+                <li><a href="lookbook.html">Лукбук</a></li>
+                <li><a href="Profile.html">Личный кабинет</a></li>
+                <li><a href="register.html">Вход и Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="auth">
+            <h1>Вход и Регистрация</h1>
+
+            <!-- Переключатели для выбора режима -->
+            <div class="tabs">
+                <button class="tab-button active" onclick="showForm('login')">Войти</button>
+                <button class="tab-button" onclick="showForm('register')">Зарегистрироваться</button>
+            </div>
+
+            <!-- Форма для входа -->
+            <div id="login-form" class="form-container active">
+                <h2>Вход</h2>
+                <form id="login">
+                    <div>
+                        <label for="login-email">Электронная почта</label>
+                        <input type="email" id="login-email" name="email" required>
+                    </div>
+
+                    <div>
+                        <label for="login-password">Пароль</label>
+                        <input type="password" id="login-password" name="password" required>
+                    </div>
+
+                    <button type="submit">Войти</button>
+                </form>
+                <p>Нет аккаунта? <a href="javascript:void(0);" onclick="showForm('register')">Зарегистрироваться</a></p>
+            </div>
+
+            <!-- Форма для регистрации -->
+            <div id="register-form" class="form-container">
+                <h2>Регистрация</h2>
+                <form id="register">
+                    <div>
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div>
+                        <label for="register-email">Электронная почта</label>
+                        <input type="email" id="register-email" name="email" required>
+                    </div>
+
+                    <div>
+                        <label for="register-password">Пароль</label>
+                        <input type="password" id="register-password" name="password" required>
+                    </div>
+
+                    <div>
+                        <label for="confirm-password">Подтвердите пароль</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+
+                    <button type="submit">Зарегистрироваться</button>
+                </form>
+                <p>Есть аккаунт? <a href="javascript:void(0);" onclick="showForm('login')">Войти</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 DressWise</p>
+    </footer>
+
+    <script src="auth.js"></script>
+</body>
+
+</html>
